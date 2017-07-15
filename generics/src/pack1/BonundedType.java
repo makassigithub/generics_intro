@@ -22,10 +22,11 @@ double calculateAverage(){
 	
 	for(int i = 0;i<numbers.length;i++){
 		// the doubleValue() is defined in Number superclass then available for Double, Integer, Float...
-		// If we hadn't extend T with numbers the compiler, the compiler wouldn't know the scope of T
+		// If we hadn't extend T with Number, the compiler wouldn't have known the scope of T
 		sum += numbers[i].doubleValue();
-		// return the average
+		
 			}
+	// return the average
 	return sum /numbers.length;
 }
 

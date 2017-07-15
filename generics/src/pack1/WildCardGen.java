@@ -27,16 +27,16 @@ double calculateAverage(){
 // implement sameAverage1 that checks if two WildCardGen instances have the same average.
 
 boolean sameAverage1(WildCardGen<T> wcg1){
-	if(calculateAverage()==wcg1.calculateAverage()){
+	if(this.calculateAverage()==wcg1.calculateAverage()){
 		return true;}
 	 return false;
 	
 }
 
 boolean sameAverage2(WildCardGen <?> wcg2){
-	// We are using this to remind that calculate ins invoked on the instance of the caller.
+	// We are using this to remind that calculate() is invoked on the instance of the caller.
 	//It's optional
-	if(calculateAverage()==wcg2.calculateAverage()){
+	if(this.calculateAverage()==wcg2.calculateAverage()){
 		return true;}
 	 return false;
 	
@@ -44,7 +44,7 @@ boolean sameAverage2(WildCardGen <?> wcg2){
 
 public static void main (String[]args){
 	
-	// Here we have three different array of made of sublclasses of Number
+	// Here we have three different array made of subclasses of Number
 	// Visually, these arrays have the average
 	Integer [] intArray1 = {1,2,3,4};
 	Integer [] intArray2 = {4,3,2,1};
@@ -63,7 +63,7 @@ public static void main (String[]args){
 	
 	
 	// the following line will not compile sameAverage1 only applied to Integer Typed arrays
-	//System.out.println("The 2 integer arrays have the same average: "+intObj1.sameAverage1(dbArray));
+	//System.out.println("The Integer and the Double arrays have the same average: "+intObj1.sameAverage1(dbObj));
 	
 	// To solve this problem we must use the sameAverage2 because the wildcard accepts every Type that extends Number
 

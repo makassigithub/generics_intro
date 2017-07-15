@@ -8,19 +8,16 @@ T1 obj1;
 T2 obj2;
 
 // A constructor for this generic class
-
 MultipleTypeGen(T1 o1, T2 o2){
 	obj1 = o1;
 	obj2 = o2;
 }
 
 // create a getter for each type
-
 T1 getTypeOneObj(){return obj1;}
 T2 getTypeTwoObj(){return obj2;}
 
 // define a type printer method
-
 void showTypes(){ System.out.println(obj1.getClass().getName());
                   System.out.println(obj2.getClass().getName());}
 
@@ -36,7 +33,7 @@ public static void main(String...args){
 	System.out.println(myGenObj.getTypeTwoObj());
 	
 	System.out.println();
-   // Know, let's print the types
+   // now, let's print the types
 	myGenObj.showTypes();
 }
 

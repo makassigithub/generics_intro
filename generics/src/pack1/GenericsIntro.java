@@ -9,7 +9,7 @@ public class GenericsIntro <T> {
 	//Declare an object of type T undefined
 	T ob;
 	
-	//create a parameterized constructor that create an object 'o' of the type that is passed to it
+	//create a parameterized constructor that takes a parameter  'o' and create an object  ob of type T
 		
 	GenericsIntro(T o){		
 		ob = o;
@@ -32,7 +32,7 @@ public class GenericsIntro <T> {
 	
 		GenericsIntro<Integer> iobj ;
 		
-		// here we are using auto-boxing to implicitly wrapp the in into the Integer object.
+		// here we are using auto-boxing to implicitly wrapp the int into the Integer object.
 		iobj = new GenericsIntro <Integer>(100);
 		
 		// The following line will not compile because iobj is not decalred as a Float
@@ -40,7 +40,7 @@ public class GenericsIntro <T> {
 		//iobj = new GenericsIntro <Float>(100);
 		
 		//Now let's call the value of iobj back.
-		//We will be using the auto-unboxig to intValue from the wrapper class
+		//We will be using the auto-unboxing to intValue from the wrapper class
 		
         System.out.println("The value of iobj is "+iobj.getT());
         
@@ -61,7 +61,7 @@ public class GenericsIntro <T> {
         System.out.println("\n");
         System.out.println("Summary: With generic, the same code is reusable for various type of object");
         System.out.println("Including java built-in object and our custom made objects");
-        System.out.println("this could be Achieved with the Oject class (the SuperClass of all object, but");
+        System.out.println("this could be Achieved with the Object class (the SuperClass of all object, but");
         System.out.println("doing so would not ensure type safety, e.g. the line 39 would compile and then create a bug"); 
 	}
 
